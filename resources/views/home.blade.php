@@ -107,7 +107,7 @@
                                 alt="">
                         </div>
                         <div class="present-text campaign-inner font-ryo">
-                            ・一部お届け対象外の地域があります
+                            ・福岡県はお届け地域対象外となります
                         </div>
                     </li>
 
