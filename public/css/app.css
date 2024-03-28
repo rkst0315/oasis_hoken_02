@@ -1,0 +1,2590 @@
+@charset "UTF-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-size: 10px;
+  -webkit-text-size-adjust: 100%;
+     -moz-text-size-adjust: 100%;
+          text-size-adjust: 100%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "\6E38\30B4\30B7\30C3\30AF\4F53", YuGothic, "\6E38\30B4\30B7\30C3\30AF", "Yu Gothic", "\30E1\30A4\30EA\30AA", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+  background-color: #fbfbfb;
+  color: #565656;
+}
+
+main .form .input input::-moz-placeholder {
+  font-family: "\30E1\30A4\30EA\30AA", Meiryo, serif;
+}
+
+main .form .input input:-ms-input-placeholder {
+  font-family: "\30E1\30A4\30EA\30AA", Meiryo, serif;
+}
+
+.font-meiryo,
+main .form .input input::placeholder {
+  font-family: "\30E1\30A4\30EA\30AA", Meiryo, serif;
+}
+
+.font-yu-gothic {
+  font-family: "\6E38\30B4\30B7\30C3\30AF\4F53", YuGothic, "\6E38\30B4\30B7\30C3\30AF", "Yu Gothic", "\30E1\30A4\30EA\30AA", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+}
+
+.font-yu-gothic-pr6n {
+  font-family: "yu-gothic-pr6n", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.font-ryo {
+  font-family: "ryo-gothic-plusn", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.antialiased {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  vertical-align: bottom;
+  width: 100%;
+}
+
+@media (max-width: 767px) {
+  .pc-only {
+    display: none !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .sp-only {
+    display: none !important;
+  }
+}
+
+main {
+  display: block;
+  max-width: 768px;
+  margin: 0 auto;
+}
+
+main .logo {
+  padding: 20px 0;
+  text-align: center;
+}
+
+main .error-message {
+  margin-top: 5px;
+  color: #f00;
+}
+
+main .pagination ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 5px;
+}
+
+main .pagination ul li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 5px;
+  width: 90px;
+  height: 90px;
+  background-color: #f5abc9;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 1rem;
+}
+
+@media (min-width: 768px) {
+  main .pagination ul li {
+    font-size: 1.4rem;
+  }
+}
+
+@media (min-width: 768px) {
+  main .pagination ul li {
+    width: 120px;
+    height: 120px;
+  }
+
+  main .pagination ul li:not(:last-child) {
+    margin-right: 100px;
+  }
+
+  main .pagination ul li:not(:last-child) {
+    position: relative;
+  }
+
+  main .pagination ul li:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 60px;
+    height: 20px;
+    background-image: url("/img/arrow_right.svg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    transform: translateX(calc(100% + 20px));
+  }
+}
+
+main .pagination ul li.active {
+  background-color: #ff546c;
+}
+
+main .present {
+  background-color: #ffe3ef;
+}
+
+main .present .wrapper {
+  margin: auto;
+  padding-top: 20px;
+  padding-bottom: 40px;
+  max-width: 1000px;
+}
+
+@media (min-width: 768px) {
+  main .present .wrapper {
+    padding-bottom: 60px;
+  }
+}
+
+main .present .wrapper .image {
+  text-align: center;
+}
+
+main .present .wrapper .image img {
+  max-width: 56%;
+}
+
+main .present .wrapper .title {
+  margin-top: 30px;
+  color: #fff;
+  font-size: 2.4rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  main .present .wrapper .title {
+    margin-top: 40px;
+    font-size: 3.6rem;
+  }
+}
+
+main .present .wrapper .title span {
+  color: #ffc00a;
+}
+
+main .present .wrapper .text {
+  color: #fff;
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+@media (min-width: 768px) {
+  main .present .wrapper .text {
+    font-size: 1.8rem;
+  }
+}
+
+main .present .wrapper ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-top: 100px;
+  padding: 0 10px;
+  width: 100%;
+  max-width: 840px;
+}
+
+@media (min-width: 768px) {
+  main .present .wrapper ul {
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0 20px;
+  }
+}
+
+main .present .wrapper ul li {
+  position: relative;
+  margin-bottom: 80px;
+  width: calc(50% - 5px);
+  width: 100%;
+  max-width: 300px;
+  border: 1px solid #8c6527;
+  border-radius: 30px;
+  background-color: #fff;
+}
+
+@media (min-width: 768px) {
+  main .present .wrapper ul li {
+    margin-bottom: 80px;
+    width: calc(50% - 40px);
+    max-width: initial;
+  }
+}
+
+main .present .wrapper ul li.selected {
+  border-width: 3px;
+}
+
+main .present .wrapper ul li.selected::after {
+  content: "\9078\629E\4E2D";
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  color: #8c6527;
+  font-size: 1.6rem;
+}
+
+main .present .wrapper ul li .number {
+  position: absolute;
+  top: -60px;
+  right: -20px;
+  width: 160px;
+}
+
+@media (min-width: 768px) {
+  main .present .wrapper ul li .number {
+    width: 200px;
+  }
+}
+
+main .present .wrapper ul li .number img {
+  width: 100%;
+}
+
+main .present .wrapper ul li .photo {
+  position: relative;
+}
+
+main .present .wrapper ul li .photo::before {
+  display: block;
+  content: "";
+  padding-top: 84.2105263158%;
+}
+
+main .present .wrapper ul li .photo img {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  width: calc(100% - 100px);
+  height: calc(100% - 100px);
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+main .present .wrapper ul li p {
+  padding: 5px 5px;
+  color: #8c6527;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  main .present .wrapper ul li p {
+    padding: 10px 10px;
+    font-size: 1.6rem;
+  }
+}
+
+main .present .wrapper ul li p.more {
+  display: none;
+  padding: 0;
+  padding-bottom: 10px;
+  color: #f9294c;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+@media (min-width: 768px) {
+  main .present .wrapper ul li p.more {
+    font-size: 1.2rem;
+  }
+}
+
+main .present .wrapper ul li input {
+  display: none;
+}
+
+main .present .wrapper .button {
+  margin-top: 50px;
+  padding: 0 20px;
+  text-align: center;
+}
+
+main .present .wrapper .button button {
+  outline: none;
+  background: none;
+  border: none;
+  background-color: #f5abc9;
+  color: #fff;
+  width: 100%;
+  max-width: 480px;
+  height: 60px;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  border-radius: 40px;
+  box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.45);
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  main .present .wrapper .button button {
+    height: 60px;
+  }
+}
+
+main .application .wrapper {
+  margin: auto;
+  padding-top: 20px;
+  padding-bottom: 40px;
+  max-width: 1000px;
+}
+
+@media (min-width: 768px) {
+  main .application .wrapper {
+    padding-bottom: 60px;
+  }
+}
+
+main .application .wrapper .image {
+  text-align: center;
+}
+
+main .application .wrapper .image img {
+  width: 41%;
+}
+
+main .application .wrapper .title {
+  margin-top: 30px;
+  color: #ff546c;
+  font-size: 2.4rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  main .application .wrapper .title {
+    margin-top: 40px;
+    font-size: 3.6rem;
+  }
+}
+
+main .application form {
+  margin-top: 20px;
+  padding: 20px;
+}
+
+main .application form input,
+main .application form select {
+  padding: 0.25em 0.75em;
+  font-size: 1.6rem;
+  border: 2px solid #ccc;
+  border-radius: 3px;
+}
+
+@media (min-width: 768px) {
+  main .application form input,
+  main .application form select {
+    font-size: 1.8rem;
+  }
+}
+
+main .application form select {
+  background-color: #fff;
+}
+
+main .application form .vertical-top {
+  vertical-align: top;
+}
+
+main .application form .name input,
+main .application form .furigana input {
+  margin-right: 10px;
+  width: calc(50% - 20px);
+}
+
+main .application form .birthday input,
+main .application form .birthday_child input,
+main .application form .num input {
+  margin-right: 5px;
+  text-align: center;
+  width: calc(30% - 2em);
+}
+
+main .application form .tel input,
+main .application form .zipcode input {
+  width: 80px;
+}
+
+@media (min-width: 768px) {
+  main .application form .tel input,
+  main .application form .zipcode input {
+    width: 150px;
+  }
+}
+
+main .application form .pref select {
+  width: 150px;
+}
+
+main .application form .address_1 input,
+main .application form .address_2 input,
+main .application form .address_3 input,
+main .application form .email input {
+  width: calc(100% - 30px);
+}
+
+main .application form .job select {
+  width: calc(100% - 30px);
+}
+
+@media (min-width: 768px) {
+  main .application form .sex ul,
+  main .application form .lifestyle ul {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 10px;
+  }
+}
+
+main .application form .sex ul li,
+main .application form .lifestyle ul li {
+  margin-bottom: 5px;
+  color: #aaa;
+  background-color: #fff;
+  border-radius: 5px;
+  border: 2px solid #ccc;
+  cursor: pointer;
+  width: calc(100% - 20px);
+  min-width: 160px;
+}
+
+@media (min-width: 768px) {
+  main .application form .sex ul li,
+  main .application form .lifestyle ul li {
+    margin-bottom: 0;
+    width: auto;
+  }
+
+  main .application form .sex ul li:not(:last-child),
+  main .application form .lifestyle ul li:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+
+main .application form .sex ul li.selected,
+main .application form .lifestyle ul li.selected {
+  color: #fff;
+  border-color: #ff5353;
+  background-color: #ff5353;
+}
+
+main .application form .sex ul li label,
+main .application form .lifestyle ul li label {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+main .application form .sex ul li label input,
+main .application form .lifestyle ul li label input {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+main .application form .sex ul li label span,
+main .application form .lifestyle ul li label span {
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+main .application form .ex ul {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+}
+
+main .application form .ex ul li {
+  color: #aaa;
+  background-color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  width: calc(100% - 20px);
+}
+
+@media (min-width: 768px) {
+  main .application form .ex ul li {
+    margin-bottom: 0;
+    width: auto;
+  }
+
+  main .application form .ex ul li:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+
+main .application form .ex ul li.selected {
+  color: #fff;
+  border-color: #ff5353;
+  background-color: #ff5353;
+}
+
+main .application form .ex ul li label {
+  display: flex;
+  align-items: center;
+  padding: 10px 10px;
+  cursor: pointer;
+}
+
+main .application form .ex ul li label input {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+main .application form .ex ul li label span {
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+main .application form .ex .ex_other {
+  margin-top: 5px;
+  padding-left: 35px;
+}
+
+main .application form .ex .ex_other textarea {
+  width: 100%;
+  max-width: 400px;
+  height: 8em;
+}
+
+main .application form .button {
+  margin-top: 50px;
+  padding: 0 20px;
+  text-align: center;
+}
+
+main .application form .button button {
+  outline: none;
+  background: none;
+  border: none;
+  background-color: #f5abc9;
+  color: #fff;
+  width: 100%;
+  max-width: 480px;
+  height: 60px;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  border-radius: 40px;
+  box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.45);
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  main .application form .button button {
+    height: 60px;
+  }
+}
+
+main .application form .note {
+  margin-top: 20px;
+  color: #8c6527;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+main .application form h4 {
+  margin-top: 50px;
+  color: #8c6527;
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: 400;
+}
+
+main .application form .note2 {
+  padding-bottom: 20px;
+  margin-top: 10px;
+  color: #8c6527;
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+main .application form .notice {
+  margin-bottom: 10px;
+  padding-left: 0.5em;
+  color: #f00;
+}
+
+main .application form .has-error {
+  border-color: #f00 !important;
+}
+
+main .application table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+main .application table th,
+main .application table td {
+  display: block;
+}
+
+main .application table th {
+  padding-top: 10px;
+  width: 300px;
+  text-align: left;
+}
+
+@media (min-width: 768px) {
+  main .application table th {
+    padding: 10px;
+  }
+}
+
+main .application table th div {
+  display: flex;
+  align-items: center;
+}
+
+main .application table th .required {
+  margin-right: 10px;
+  padding: 2px 5px;
+  color: #fff;
+  font-size: 1.2rem;
+  background-color: #f01111;
+  border-radius: 5px;
+}
+
+main .application table th p {
+  color: #8f5700;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+main .application table td {
+  padding: 10px 0;
+}
+
+main .confirm .wrapper {
+  margin: auto;
+  padding-top: 20px;
+  padding-bottom: 40px;
+  max-width: 1000px;
+}
+
+@media (min-width: 768px) {
+  main .confirm .wrapper {
+    padding-bottom: 60px;
+  }
+}
+
+main .confirm .wrapper .image {
+  text-align: center;
+}
+
+main .confirm .wrapper .image img {
+  width: 55%;
+}
+
+main .confirm .title {
+  margin-top: 30px;
+  color: #8c6527;
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: 400;
+}
+
+@media (min-width: 768px) {
+  main .confirm .title {
+    margin-top: 50px;
+    font-size: 3.6rem;
+  }
+}
+
+main .confirm .subtitle {
+  margin-top: 20px;
+  padding: 0 10px;
+  color: #8c6527;
+  font-size: 1.6rem;
+}
+
+@media (min-width: 768px) {
+  main .confirm .subtitle {
+    padding: 0;
+  }
+}
+
+main .confirm .selected-present {
+  display: flex;
+  align-items: center;
+  padding: 10px 10px;
+  color: #8c6527;
+  font-size: 1.4rem;
+}
+
+@media (min-width: 768px) {
+  main .confirm .selected-present {
+    padding: 10px 0;
+    font-size: 1.6rem;
+  }
+}
+
+main .confirm .selected-present .photo {
+  margin-right: 10px;
+  padding: 10px;
+  width: 80px;
+  height: 80px;
+  border: 1px solid #ff5353;
+  border-radius: 3px;
+}
+
+main .confirm .selected-present .photo img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+main .confirm form {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #fbf9ef;
+}
+
+@media (min-width: 768px) {
+  main .confirm form {
+    margin-top: 50px;
+  }
+}
+
+main .confirm form .name,
+main .confirm form .furigana,
+main .confirm form .sex,
+main .confirm form .birthday,
+main .confirm form .zipcode,
+main .confirm form .pref,
+main .confirm form .address_1,
+main .confirm form .address_2,
+main .confirm form .address_3,
+main .confirm form .tel,
+main .confirm form .email,
+main .confirm form .job,
+main .confirm form .birthday_child,
+main .confirm form .num,
+main .confirm form .lifestyle,
+main .confirm form .ex {
+  padding: 0.5em 1em;
+  border-radius: 3px;
+}
+
+main .confirm form .name span,
+main .confirm form .furigana span,
+main .confirm form .sex span,
+main .confirm form .birthday span,
+main .confirm form .zipcode span,
+main .confirm form .pref span,
+main .confirm form .address_1 span,
+main .confirm form .address_2 span,
+main .confirm form .address_3 span,
+main .confirm form .tel span,
+main .confirm form .email span,
+main .confirm form .job span,
+main .confirm form .birthday_child span,
+main .confirm form .num span,
+main .confirm form .lifestyle span,
+main .confirm form .ex span {
+  color: #8c6527;
+}
+
+main .confirm form .button {
+  margin-top: 50px;
+  padding: 0 20px;
+  text-align: center;
+}
+
+main .confirm form .button button {
+  outline: none;
+  background: none;
+  border: none;
+  background-color: #f5abc9;
+  color: #fff;
+  width: 100%;
+  max-width: 480px;
+  height: 60px;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  border-radius: 40px;
+  box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.45);
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  main .confirm form .button button {
+    height: 60px;
+  }
+}
+
+main .confirm form .back {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+main .confirm form .back a {
+  color: #8c6527;
+}
+
+main .confirm form .note {
+  margin-top: 20px;
+  color: #8c6527;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+main .confirm form h4 {
+  margin-top: 50px;
+  color: #8c6527;
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: 400;
+}
+
+main .confirm form .note2 {
+  padding-bottom: 20px;
+  margin-top: 10px;
+  color: #8c6527;
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+main .confirm table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+main .confirm table th,
+main .confirm table td {
+  display: block;
+}
+
+main .confirm table th {
+  padding: 10px;
+  width: 300px;
+  text-align: left;
+}
+
+main .confirm table th div {
+  display: flex;
+  align-items: center;
+}
+
+main .confirm table th .required {
+  margin-right: 10px;
+  padding: 2px 5px;
+  color: #fff;
+  font-size: 1.2rem;
+  background-color: #f01111;
+  border-radius: 5px;
+}
+
+main .confirm table th p {
+  color: #8f5700;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+main .confirm table td {
+  padding: 10px 0;
+}
+
+main .finished .wrapper {
+  margin: auto;
+  padding-top: 20px;
+  padding-bottom: 40px;
+  max-width: 1000px;
+}
+
+@media (min-width: 768px) {
+  main .finished .wrapper {
+    padding-bottom: 60px;
+  }
+}
+
+main .finished .title {
+  color: #8c6527;
+  text-align: center;
+  font-size: 2.4rem;
+}
+
+@media (min-width: 768px) {
+  main .finished .title {
+    font-size: 3.6rem;
+  }
+}
+
+main .finished .text {
+  margin-top: 50px;
+  font-size: 1.8rem;
+  line-height: 2;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  main .finished .text {
+    font-size: 3rem;
+  }
+}
+
+main .form {
+  margin: auto;
+  max-width: 640px;
+}
+
+main .form .input {
+  padding: 0 20px;
+}
+
+main .form .input input {
+  background: none;
+  padding: 0 1em;
+  color: #8c6527;
+  width: 100%;
+  height: 60px;
+  font-size: 1.6rem;
+  font-weight: bold;
+  background-color: #fff;
+  border: 5px solid #f5abc9;
+  border-left-width: 10px;
+  border-right-width: 10px;
+  outline: none;
+}
+
+@media (min-width: 768px) {
+  main .form .input input {
+    padding: 0 2em;
+    font-size: 2rem;
+    height: 100px;
+    border: 10px solid #f5abc9;
+    border-left-width: 20px;
+    border-right-width: 20px;
+  }
+}
+
+main .form .input input::-moz-placeholder {
+  color: #8c6527;
+}
+
+main .form .input input:-ms-input-placeholder {
+  color: #8c6527;
+}
+
+main .form .input input::placeholder {
+  color: #8c6527;
+}
+
+main .form .button {
+  margin-top: 25px;
+  padding: 0 20px;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  main .form .button {
+    margin-top: 50px;
+  }
+}
+
+main .form .button button {
+  background: none;
+  border: none;
+  width: 100%;
+  max-width: 640px;
+  cursor: pointer;
+}
+
+main .form .button button img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+main .form .note {
+  margin-top: 20px;
+  padding: 0 20px;
+}
+
+main .form .note p {
+  color: #8c6527;
+  font-size: 1rem;
+}
+
+main .detail .wrapper {
+  margin: auto;
+  padding: 40px 0;
+  max-width: 1000px;
+}
+
+@media (min-width: 768px) {
+  main .detail .wrapper {
+    padding: 60px 0;
+  }
+}
+
+main .detail .present {
+  text-align: center;
+}
+
+main .detail .present img {
+  width: 72%;
+}
+
+main .detail .dummy {
+  margin-top: 20px;
+  text-align: center;
+}
+
+main .detail .dummy img {
+  width: 63.5%;
+}
+
+main .detail .link {
+  margin-top: 30px;
+  padding: 0 20px;
+}
+
+@media (min-width: 768px) {
+  main .detail .link {
+    margin-top: 50px;
+  }
+}
+
+main .detail .link a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  color: #f9294c;
+  max-width: 280px;
+  height: 60px;
+  font-size: 2.6rem;
+  font-size: 400;
+  border: 3px solid #f9294c;
+  border-radius: 40px;
+}
+
+@media (min-width: 768px) {
+  main .detail .link a {
+    max-width: 480px;
+    height: 80px;
+    font-size: 4.8rem;
+    border: 5px solid #f9294c;
+    border-radius: 40px;
+  }
+}
+
+main .prize .wrapper {
+  margin: auto;
+  padding: 40px 0;
+  max-width: 1000px;
+}
+
+@media (min-width: 768px) {
+  main .prize .wrapper {
+    padding: 60px 0;
+  }
+}
+
+main .prize .prize {
+  text-align: center;
+}
+
+main .prize .prize img {
+  width: 100%;
+  min-width: 220px;
+}
+
+@media (min-width: 768px) {
+  main .prize .prize img {
+    width: 50%;
+  }
+}
+
+main .prize ul {
+  margin-top: 40px;
+  padding: 0 20px;
+}
+
+@media (min-width: 768px) {
+  main .prize ul {
+    padding: 0 80px;
+  }
+}
+
+main .prize ul li {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  margin-bottom: 20px;
+  border-radius: 20px;
+}
+
+main .prize ul li:nth-child(5) {
+  margin-bottom: 40px;
+}
+
+@media (min-width: 768px) {
+  main .prize ul li {
+    margin-bottom: 40px;
+    max-width: 640px;
+    justify-content: space-around;
+  }
+
+  main .prize ul li:nth-child(5) {
+    justify-content: center;
+    align-items: center;
+  }
+
+  main .prize ul li:nth-child(5) img {
+    max-width: 600px;
+    transform: translateX(-10%);
+  }
+}
+
+main .prize ul li img {
+  max-width: 100%;
+}
+
+main .faq {
+  background-color: #ff6191;
+}
+
+main .faq .wrapper {
+  margin: auto;
+  padding: 40px 0;
+  max-width: 1000px;
+}
+
+@media (min-width: 768px) {
+  main .faq .wrapper {
+    padding: 60px 0;
+  }
+}
+
+main .faq .title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 2.4rem;
+  font-weight: 400;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  main .faq .title {
+    font-size: 3.6rem;
+  }
+}
+
+main .faq .title span:first-child {
+  font-size: 2rem;
+}
+
+main .faq ul {
+  margin-top: 30px;
+  padding: 0 20px;
+}
+
+@media (min-width: 768px) {
+  main .faq ul {
+    margin-top: 50px;
+    padding: 0 100px;
+  }
+}
+
+main .faq ul li:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+main .faq ul li .q {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 25px;
+  color: #ff546c;
+  width: 100%;
+  text-align: center;
+  font-size: 1.6rem;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+  background-color: #ffdee0;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  main .faq ul li .q {
+    padding: 15px 50px;
+    min-height: 100px;
+    font-size: 2.6rem;
+  }
+}
+
+main .faq ul li .a {
+  display: none;
+  padding: 15px 25px;
+  color: #fff;
+  font-size: 1.6rem;
+  line-height: 1.8;
+}
+
+@media (min-width: 768px) {
+  main .faq ul li .a {
+    padding: 45px 50px;
+    font-size: 2.4rem;
+  }
+}
+
+main .faq ul li .a span {
+  display: block;
+  color: #fff;
+  transform: translateX(-1em);
+}
+
+main .faq ul li .a.show {
+  display: block;
+}
+
+main .about {
+  background-color: #ff6191;
+}
+
+main .about .wrapper {
+  margin: auto;
+  padding: 40px 0;
+  max-width: 1000px;
+}
+
+@media (min-width: 768px) {
+  main .about .wrapper {
+    padding: 60px 0;
+  }
+}
+
+main .about .title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 2.4rem;
+  font-weight: 400;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  main .about .title {
+    font-size: 3.6rem;
+  }
+}
+
+main .about .title span:first-child {
+  font-size: 2rem;
+}
+
+main .about .text {
+  margin-top: 30px;
+  padding: 0 20px;
+  color: #fff;
+  font-size: 1.8rem;
+  line-height: 2;
+}
+
+@media (min-width: 768px) {
+  main .about .text {
+    margin-top: 40px;
+    padding: 20px 140px;
+    font-size: 2.4rem;
+  }
+}
+
+main .login {
+  text-align: center;
+}
+
+main .login form {
+  display: inline-block;
+  padding: 20px;
+  text-align: left;
+}
+
+main .login .input-group {
+  margin: 20px 0;
+}
+
+main .login .input-group label {
+  display: block;
+}
+
+main .login .input-group input {
+  width: 200px;
+}
+
+main .login .submit-button {
+  text-align: center;
+}
+
+main .ex-01 {
+  background-color: #fff2ef;
+}
+
+main .ex-01 .wrapper {
+  margin: auto;
+  max-width: 1000px;
+}
+
+main .ex-01 .wrapper img {
+  width: 100%;
+}
+
+/*========= common ===============*/
+
+#g-nav {
+  position: fixed;
+  z-index: 9998;
+  /*ナビのスタート位置と形状(最初は見えないように)*/
+  top: -120%;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  /*ナビの高さ*/
+  background: #856e6e;
+  /*動き*/
+  transition: all 0.6s;
+}
+
+#g-nav.panelactive {
+  top: 0;
+}
+
+/*レイアウト調整*/
+
+#g-nav #g-nav-list {
+  position: relative;
+  z-index: 9998;
+  padding: 70px 35px 0 35px;
+}
+
+#g-nav li {
+  padding: 25px 0;
+  text-align: left;
+  border-bottom: 0.5px solid #ffe1e1;
+}
+
+#g-nav li a {
+  color: #fbfbfb;
+  text-decoration: none;
+  display: block;
+  font-weight: 2rem;
+}
+
+#g-nav .nav_logo {
+  padding-top: 0;
+}
+
+#g-nav .nav_logo img {
+  max-width: 187px;
+}
+
+.openbtn1 {
+  position: fixed;
+  z-index: 9999;
+  /*ボタンを最前面に*/
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  width: 60px;
+  height: 60px;
+  background-color: #856e6e;
+  border-radius: 60px;
+}
+
+.openbtn1 span {
+  display: inline-block;
+  transition: all 0.4s;
+  position: absolute;
+  left: 14px;
+  height: 2px;
+  border-radius: 2px;
+  background-color: #fff;
+  width: 53%;
+}
+
+.openbtn1 span:nth-of-type(1) {
+  top: 21px;
+}
+
+.openbtn1 span:nth-of-type(2) {
+  top: 29px;
+}
+
+.openbtn1 span:nth-of-type(3) {
+  top: 37px;
+}
+
+.openbtn1.active {
+  background-color: #fff;
+}
+
+.openbtn1.active span {
+  background-color: #856e6e;
+}
+
+.openbtn1.active span:nth-of-type(1) {
+  top: 23px;
+  left: 16px;
+  transform: translateY(6px) rotate(-45deg);
+  width: 45%;
+}
+
+.openbtn1.active span:nth-of-type(2) {
+  opacity: 0;
+}
+
+.openbtn1.active span:nth-of-type(3) {
+  top: 35px;
+  left: 16px;
+  transform: translateY(-6px) rotate(45deg);
+  width: 45%;
+}
+
+.footer_bg {
+  max-width: 768px;
+  margin: auto;
+}
+
+footer {
+  max-width: 768px;
+  margin: auto;
+  padding: 0 30px 30px;
+  background-color: #856e6e;
+  color: #fff;
+}
+
+footer .footer_logo {
+  text-align: center;
+  margin-bottom: 65px;
+}
+
+footer .footer_logo img {
+  max-width: 222px;
+}
+
+footer .copyright {
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  footer .copyright {
+    font-size: 1.6rem;
+  }
+}
+
+@media (min-width: 576px) {
+  footer ul {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+footer ul li {
+  margin-bottom: 40px;
+}
+
+footer ul li a {
+  color: #fff;
+  font-weight: bold;
+}
+
+/*===========top===================*/
+
+.campaign-inner {
+  padding: 0 15px;
+}
+
+.campaign-h2 {
+  position: relative;
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 45px;
+}
+
+.campaign-h2 .highlight {
+  position: relative;
+  display: inline-block;
+}
+
+.campaign-h2 .highlight .fukidashi-left,
+.campaign-h2 .highlight .fukidashi-right {
+  position: absolute;
+  bottom: -20px;
+}
+
+.campaign-h2 .highlight .fukidashi-left {
+  left: -6%;
+}
+
+.campaign-h2 .highlight .fukidashi-right {
+  right: -30%;
+}
+
+.campaign-h2 .highlight:before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 23px;
+  border-radius: 12px;
+  background: #ffe1e1;
+}
+
+.mv .wrapper {
+  margin: auto;
+}
+
+.mv .wrapper .image {
+  position: relative;
+}
+
+.mv .wrapper .image .text {
+  position: absolute;
+  top: 9%;
+  left: 6%;
+  z-index: 3000;
+}
+
+.mv .wrapper .image .text p {
+  position: relative;
+  z-index: 4000;
+}
+
+@media (min-width: 576px) {
+  .mv .wrapper .image .text p {
+    font-size: 2.6rem;
+  }
+}
+
+.mv .wrapper .image .text .text-img {
+  position: relative;
+  z-index: 3500;
+  margin-top: -40px;
+}
+
+.campaign-about {
+  position: relative;
+  z-index: 5000;
+  margin-top: -13.7%;
+}
+
+.campaign-about .campaign-about-bg {
+  text-align: right;
+}
+
+.campaign-about .campaign-about-content {
+  margin-bottom: 60px;
+}
+
+@media (min-width: 576px) {
+  .campaign-about .campaign-about-content p {
+    font-size: 2rem;
+    text-align: center;
+  }
+}
+
+.campaign-about .campaign-about-ribbon {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.campaign-company .slick-track {
+  display: flex !important;
+  align-items: end !important;
+}
+
+.campaign-company .pal {
+  width: 140px;
+}
+
+@media (min-width: 768px) {
+  .campaign-company .pal {
+    width: 260px;
+  }
+}
+
+.campaign-company .pals {
+  width: 100px;
+}
+
+@media (min-width: 768px) {
+  .campaign-company .pals {
+    width: 180px;
+  }
+}
+
+.campaign-company .aqua {
+  width: 90px;
+}
+
+@media (min-width: 768px) {
+  .campaign-company .aqua {
+    width: 160px;
+  }
+}
+
+.campaign-company-02 {
+  margin: 50px 0;
+}
+
+.campaign-company-02 .done {
+  width: 140px;
+}
+
+@media (min-width: 768px) {
+  .campaign-company-02 .done {
+    width: 260px;
+  }
+}
+
+.campaign-company-02 .tys {
+  width: 100px;
+}
+
+@media (min-width: 768px) {
+  .campaign-company-02 .tys {
+    width: 180px;
+  }
+}
+
+.campaign-company-02 .hoken {
+  width: 130px;
+}
+
+@media (min-width: 768px) {
+  .campaign-company-02 .hoken {
+    width: 240px;
+  }
+}
+
+.campaign-present .campaign-h2 {
+  margin-top: -40px;
+  font-size: 2.4rem;
+}
+
+.campaign-present .campaign-h2 .highlight:before {
+  width: 116%;
+  left: -8%;
+}
+
+.campaign-present ul {
+  padding-bottom: 85px;
+  background-image: url(/img/present-bg-05.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
+}
+
+.campaign-present ul li .present-title {
+  margin-bottom: 15px;
+  text-align: center;
+  color: #645757;
+  font-size: 1.8rem;
+}
+
+.campaign-present ul li .present-title p {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+@media (min-width: 576px) {
+  .campaign-present ul li .present-title p {
+    font-size: 2.2rem;
+  }
+}
+
+.campaign-present ul li .meguru {
+  font-size: 1.6rem;
+  margin-top: 3%;
+}
+
+@media (min-width: 576px) {
+  .campaign-present ul li .meguru {
+    font-size: 1.8rem;
+    margin-top: 10%;
+  }
+}
+
+.campaign-present ul li .meguru p {
+  font-size: 1.8rem;
+}
+
+@media (min-width: 576px) {
+  .campaign-present ul li .meguru p {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .campaign-present ul li .meguru {
+    font-size: 1.4rem;
+    margin-top: -2%;
+  }
+
+  .campaign-present ul li .meguru p {
+    font-size: 1.6rem;
+  }
+}
+
+.campaign-present ul li .present-left,
+.campaign-present ul li .present-right {
+  margin-bottom: 5px;
+}
+
+.campaign-present ul li .present-left {
+  padding-left: 70px;
+}
+
+.campaign-present ul li .present-right {
+  padding-right: 70px;
+}
+
+.campaign-present ul li .present-text {
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+@media (min-width: 576px) {
+  .campaign-present ul li .present-text {
+    font-size: 1.6rem;
+  }
+}
+
+.campaign-present ul li .present-text .indent {
+  padding-left: 1em;
+}
+
+.campaign-present ul li .present-text .indent div {
+  padding-left: 6em;
+}
+
+.campaign-present ul li:nth-of-type(1) {
+  background-image: url(/img/present-bg-01.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.campaign-present ul li:nth-of-type(2) {
+  margin-bottom: 15px;
+  padding-top: 65px;
+  background-image: url(/img/present-bg-02.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.campaign-present ul li:nth-of-type(3) {
+  margin-bottom: 25px;
+  padding-top: 50px;
+  background-image: url(/img/present-bg-03.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.campaign-present ul li:nth-of-type(3) .present-left {
+  position: relative;
+}
+
+.campaign-present ul li:nth-of-type(3) .present-left div {
+  position: absolute;
+  top: 10%;
+  left: 6%;
+}
+
+@media (min-width: 576px) {
+  .campaign-present ul li:nth-of-type(3) .present-left div {
+    width: 200px;
+  }
+}
+
+.campaign-present ul li:nth-of-type(4) {
+  padding-top: 25px;
+  background-image: url(/img/present-bg-04.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.campaign-present ul li:nth-of-type(4) .present-right {
+  position: relative;
+}
+
+.campaign-present ul li:nth-of-type(4) .present-right div {
+  position: absolute;
+  top: 10%;
+  right: 3%;
+}
+
+@media (min-width: 576px) {
+  .campaign-present ul li:nth-of-type(4) .present-right div {
+    width: 200px;
+  }
+}
+
+.campaign-form .bg03 {
+  margin-top: -70px;
+  margin-bottom: 20px;
+}
+
+main .confirmation-image {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+@media (min-width: 576px) {
+  main .confirmation-image {
+    margin-bottom: 30px;
+  }
+}
+
+main .confirmation-image .confirm-text {
+  margin-bottom: 30px;
+  font-size: 2rem;
+}
+
+main .confirmation-image img {
+  width: 70%;
+}
+
+@media (min-width: 576px) {
+  main .confirmation-image img {
+    width: 50%;
+  }
+}
+
+main .application .wrapper {
+  padding-top: 0;
+  max-width: 768px;
+}
+
+main .application form {
+  margin-top: 0;
+  padding: 0 15px;
+}
+
+main .application form table {
+  margin-bottom: 30px;
+}
+
+main .application form table tr th {
+  margin: 10px 0 5px;
+  padding-top: 0;
+  width: auto;
+}
+
+main .application form table tr th p {
+  color: #565656;
+  font-weight: bold;
+}
+
+main .application form table tr td {
+  padding: 0;
+}
+
+main .application form table tr td ul li {
+  margin-bottom: 10px;
+}
+
+main .application form table tr td ul li:last-of-type {
+  margin-bottom: 0;
+}
+
+main .application form input,
+main .application form select {
+  height: 45px;
+  border: 1px solid #707070;
+  border-radius: 10px;
+}
+
+main .application form input::-moz-placeholder, main .application form select::-moz-placeholder {
+  color: #c8c8c8;
+}
+
+main .application form input:-ms-input-placeholder, main .application form select:-ms-input-placeholder {
+  color: #c8c8c8;
+}
+
+main .application form input::placeholder,
+main .application form select::placeholder {
+  color: #c8c8c8;
+}
+
+main .application form input:-webkit-autofill {
+  box-shadow: 0 0 0 1000px white inset !important;
+}
+
+main .application form .select-box {
+  position: relative;
+}
+
+main .application form .select-box select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  color: #c8c8c8;
+}
+
+main .application form .select-box select:invalid {
+  color: #c8c8c8;
+}
+
+main .application form .select-box select option {
+  color: #565656;
+}
+
+main .application form .select-box select option:first-child {
+  color: #c8c8c8;
+}
+
+main .application form .select-box::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border: 0.5px solid #707070;
+  border-left: 0;
+  border-bottom: 0;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-60%) rotate(135deg);
+  pointer-events: none;
+}
+
+main .application form .name input,
+main .application form .furigana input {
+  width: 100%;
+  margin-right: 0;
+}
+
+main .application form .form_caution {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+main .application form .birthday {
+  display: flex;
+  justify-content: space-between;
+}
+
+main .application form .birthday .select-box {
+  width: 30%;
+}
+
+main .application form .birthday .select-box select {
+  width: 100%;
+}
+
+main .application form .zipcode_pref {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+main .application form .zipcode_pref li {
+  width: 48%;
+  margin-bottom: 0;
+}
+
+main .application form .zipcode_pref li .zipcode input {
+  width: 100%;
+}
+
+main .application form .pref select {
+  width: 100%;
+}
+
+main .application form .form_caution_adress {
+  margin-top: -5px;
+  margin-bottom: 10px;
+}
+
+main .application form .address_1 input,
+main .application form .address_2 input,
+main .application form .address_3 input,
+main .application form .tel input,
+main .application form .email input {
+  width: 100%;
+}
+
+main .application form .lifestyle ul li {
+  width: 100%;
+  background-color: #fbfbfb;
+  color: #707070;
+  border: none;
+}
+
+main .application form .lifestyle ul li label {
+  padding: 0;
+}
+
+main .application form .lifestyle ul li label input {
+  height: auto;
+}
+
+main .application form .lifestyle ul li label span {
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+main .application form .lifestyle ul li.selected {
+  color: #707070;
+  background-color: #fbfbfb;
+  border-color: #fbfbfb;
+}
+
+main .application form .num .select-box {
+  width: 30%;
+  white-space: nowrap;
+}
+
+main .application form .num .select-box select {
+  margin-right: 10px;
+  width: 100%;
+}
+
+main .application form .birthday_child {
+  display: flex;
+  justify-content: space-between;
+}
+
+main .application form .birthday_child .select-box {
+  width: 30%;
+}
+
+main .application form .birthday_child .select-box select {
+  width: 100%;
+}
+
+main .application form .privacy-policy {
+  font-size: 1.4rem;
+  /* スクロールバーの線の丸み */
+}
+
+main .application form .privacy-policy p {
+  margin-bottom: 20px;
+}
+
+main .application form .privacy-policy .privacy-policy-box {
+  margin-bottom: 40px;
+  color: #707070;
+  font-size: 14px;
+  border: 1px solid #707070;
+  border-radius: 10px;
+  background-color: #fff;
+  height: 215px;
+  overflow-y: scroll;
+  padding: 15px;
+}
+
+main .application form .privacy-policy .privacy-policy-box p {
+  margin-bottom: 20px;
+}
+
+main .application form .privacy-policy ::-webkit-scrollbar {
+  width: 5px;
+  /* Chrome/Safari/Edge用のスクロールバー幅 */
+}
+
+main .application form .privacy-policy ::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  /* スクロールバーの線の丸み */
+  background-color: #c8c8c8;
+  /* スクロールバーの色 */
+}
+
+main .application form .button {
+  margin-top: 0;
+}
+
+main .application form .button button,
+main .application form .button label {
+  height: 45px;
+  background-color: #856e6e;
+  border-radius: 10px;
+  box-shadow: none;
+  font-size: 1.8rem;
+}
+
+main .application form .check-disabled {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+main .application form .check-disabled label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 480px;
+  background-color: #ebebeb;
+  font-weight: bold;
+}
+
+main .application form .check-disabled label input[type=checkbox] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  position: relative;
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+  padding: 0;
+  background-color: #fff;
+  border: none;
+  border-radius: 0;
+}
+
+main .application form .check-disabled label input[type=checkbox]:checked:before {
+  position: absolute;
+  top: 1px;
+  left: 4px;
+  transform: rotate(50deg);
+  width: 4px;
+  height: 8px;
+  border-right: 2px solid #000;
+  border-bottom: 2px solid #000;
+  content: "";
+}
+
+main .confirm-under-wrapper {
+  margin-bottom: 20px;
+}
+
+main .confirm .wrapper {
+  padding-bottom: 0;
+}
+
+main .confirm form {
+  padding: 0;
+  background-color: #fbfbfb;
+}
+
+main .confirm form th {
+  width: auto;
+  padding: 0;
+}
+
+main .confirm form td {
+  padding: 0;
+}
+
+main .confirm form td div {
+  padding: 10px 10px 30px !important;
+}
+
+main .confirm form .confirm-adress td div {
+  padding: 0 10px !important;
+}
+
+main .confirm form .confirm-field {
+  background-color: #f2f2f2;
+}
+
+main .confirm form .confirm-field p {
+  padding: 10px;
+  color: #565656;
+  font-weight: bold;
+}
+
+main .confirm form .button {
+  margin-top: 0;
+}
+
+main .confirm form .button button {
+  height: 45px;
+  background-color: #856e6e;
+  border-radius: 10px;
+  box-shadow: none;
+  font-size: 1.8rem;
+}
+
+main .back {
+  height: 45px;
+  margin-top: 20px;
+  padding: 0 20px;
+  display: flex;
+  justify-content: center;
+}
+
+main .back a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 470px;
+  height: 100%;
+  border: 1px solid #565656;
+  border-radius: 10px;
+  color: #565656 !important;
+  font-weight: bold;
+  font-size: 1.8rem;
+}
+
+.finished .finished-text {
+  text-align: center;
+  margin: 10px 0 40px;
+}
+
+/*========= common-under ===============*/
+
+.under-top .campaign-about {
+  margin-top: -8.2%;
+}
+
+.under-top .campaign-about .campaign-about-bg {
+  position: relative;
+}
+
+.under-top .campaign-about .campaign-about-bg img {
+  width: 75%;
+}
+
+.under-top .campaign-about .campaign-about-bg .current {
+  position: absolute;
+  top: 48%;
+  left: 15px;
+  font-size: 1.2rem;
+}
+
+@media (min-width: 576px) {
+  .under-top .campaign-about .campaign-about-bg .current {
+    font-size: 1.4rem;
+  }
+}
+
+.under-top .campaign-about .campaign-about-bg .current a {
+  color: #565656;
+}
+
+.under-wrapper {
+  padding: 0 15px;
+  margin-bottom: 80px;
+}
+
+.under-wrapper .under-title {
+  margin-bottom: 35px;
+  text-align: center;
+}
+
+.under-wrapper .under-title img {
+  max-width: 40px;
+  margin-bottom: 5px;
+}
+
+.under-wrapper .under-title h1 {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+/*=============faq==============*/
+
+.accordion {
+  padding: 0 10px;
+  position: relative;
+  width: 100%;
+}
+
+.accordion .accordion-container {
+  margin-bottom: 30px;
+}
+
+.accordion .accordion-item {
+  margin-bottom: 10px;
+}
+
+.accordion .accordion-title {
+  position: relative;
+  cursor: pointer;
+  padding: 15px 30px 15px 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  background-color: #f2f2f2;
+}
+
+@media (min-width: 576px) {
+  .accordion .accordion-title {
+    font-size: 1.6rem;
+    padding-left: 30px;
+  }
+}
+
+.accordion .accordion-title span {
+  position: absolute;
+  top: 15px;
+  left: 7px;
+}
+
+.accordion .accordion-content {
+  display: none;
+  padding: 15px 1px 40px 20px;
+}
+
+@media (min-width: 576px) {
+  .accordion .accordion-content {
+    padding-left: 30px;
+  }
+}
+
+.accordion .accordion-content p {
+  position: relative;
+  font-size: 1.2rem;
+}
+
+@media (min-width: 576px) {
+  .accordion .accordion-content p {
+    font-size: 1.6rem;
+  }
+}
+
+.accordion .accordion-content p span {
+  position: absolute;
+  top: 0;
+  left: -12px;
+  font-weight: bold;
+}
+
+@media (min-width: 576px) {
+  .accordion .accordion-content p span {
+    left: -19px;
+  }
+}
+
+.accordion .accordion-content p .link {
+  color: #565656;
+  text-decoration: underline;
+}
+
+.accordion .faq-contact {
+  padding: 20px 23px;
+  background-color: #F2F2F2;
+  border-radius: 25px;
+  font-size: 1.2rem;
+}
+
+.accordion .faq-contact p:nth-of-type(2) {
+  margin: 15px 0;
+}
+
+.accordion .faq-contact p:nth-of-type(2) a {
+  color: #856E6E;
+  text-decoration: underline;
+}
+
+@media (min-width: 576px) {
+  .accordion .faq-contact {
+    font-size: 1.6rem;
+  }
+}
+
+/* 矢印 */
+
+.accordion-title {
+  position: relative;
+}
+
+.accordion-title::after {
+  border-right: solid 1px #000;
+  border-top: solid 1px #000;
+  content: "";
+  display: block;
+  height: 8px;
+  position: absolute;
+  right: 10px;
+  top: 38%;
+  transform: rotate(135deg);
+  transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+  width: 8px;
+}
+
+.accordion-title.open::after {
+  top: 45%;
+  transform: rotate(-45deg);
+}
+
+/*=============company==============*/
+
+.company {
+  font-size: 1.2rem;
+}
+
+@media (min-width: 576px) {
+  .company {
+    font-size: 1.6rem;
+  }
+}
+
+.company .company-text {
+  margin-bottom: 40px;
+}
+
+.company .company-table {
+  padding: 0 55px;
+}
+
+@media (min-width: 576px) {
+  .company .company-table {
+    padding: 0 19%;
+  }
+}
+
+.company .company-table dl {
+  display: flex;
+  margin-bottom: 40px;
+}
+
+.company .company-table dl dt {
+  width: 40%;
+  font-weight: bold;
+}
+
+.company .company-table dl .oasis {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+  white-space: nowrap;
+}
+
+.company .company-map {
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.company .company-map iframe {
+  max-width: 500px;
+  max-height: 260px;
+}
+
+/*=============privacy-policy==============*/
+
+.privacy-policy {
+  font-size: 1.2rem;
+  line-height: 1.8;
+}
+
+@media (min-width: 576px) {
+  .privacy-policy {
+    font-size: 1.6rem;
+  }
+}
+
+.privacy-policy-contents .privacy-policy-text {
+  margin-bottom: 35px;
+}
+
+.privacy-policy-item {
+  margin-bottom: 40px;
+}
+
+.privacy-policy-item .privacy-policy-h2 {
+  padding: 10px 25px;
+  margin-bottom: 15px;
+  background-color: #f2f2f2;
+  font-size: 1.6rem;
+}
+
+.privacy-policy-item ol {
+  padding-left: 1em;
+}
+
+.privacy-policy-item .indent {
+  text-indent: -1em;
+  padding-left: 1em;
+}
+
+.privacy-policy-item:nth-of-type(2) li {
+  margin-bottom: 15px;
+}
+
+.privacy-policy-item:nth-of-type(2) li p {
+  text-indent: -1em;
+  padding-left: 1em;
+}
+
+.privacy-policy-item:nth-of-type(4) ol > li:first-child {
+  margin-bottom: 40px;
+}
+
+.privacy-policy-item:nth-of-type(8) ul:last-of-type {
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+
+/*=============contact==============*/
+
+.contact .contact-only .contact textarea {
+  width: 100%;
+  height: 370px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.contact .top-form tr:nth-of-type(3),
+.contact .top-form tr:nth-of-type(4),
+.contact .top-form tr:nth-of-type(7),
+.contact .top-form tr:nth-of-type(8),
+.contact .top-form tr:nth-of-type(9) {
+  display: none;
+}
+
